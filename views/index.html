@@ -1,0 +1,20 @@
+<div class="input">
+  <form method="get" onsubmit="submitUrl()">
+    Enter your url here : <br><input type="text" name="url" id="longInputBox">
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<br/><br/><br/>
+<div class="output">
+    
+</div>
+<script type="text/javascript">
+  function submitUrl()
+  {
+    var longUrl = document.getElementById("longInputBox").value;
+    var encodedUri = encodeURIComponent(longUrl);  
+    
+    window.location.href = "https://url-shortener-microservice-fcc-three.glitch.me/output/"+encodedUri;
+    //self.location = "https://url-shortener-microservice-fcc-three.glitch.me/"+encodedUri;
+  }
+</script>
